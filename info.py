@@ -74,10 +74,10 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 # Links
 SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/Interworld_Request')
 OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/Itzmecp")
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/InterWorld_Ofc')
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/InterWorldmx')
 FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/Interworld_Request')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/InterWorld_Ofc")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/InterWorld_Ofc")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/InterWorldmx")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/InterWorldmx")
 
 # Bot settings
 DELETE_TIME = int(environ.get('DELETE_TIME', 3600)) # Add time in seconds
@@ -95,7 +95,7 @@ INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTE
 PM_FILE_DELETE_TIME = int(environ.get('PM_FILE_DELETE_TIME', '3600'))
 
 # boolean settings
-IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', True)
+IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', False)
 IS_VERIFY = is_enabled('IS_VERIFY', False)
 AUTO_DELETE = is_enabled('AUTO_DELETE', False)
 WELCOME = is_enabled('WELCOME', True)
