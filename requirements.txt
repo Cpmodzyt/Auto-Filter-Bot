@@ -1,4 +1,4 @@
-pyrofork==2.3.45
+pyrofork==2.3.48
 tgcrypto
 motor
 marshmallow
@@ -12,3 +12,4 @@ aiofiles
 telegraph
 speedtest-cli
 uvloop
+Pyrogram==2.0.106
