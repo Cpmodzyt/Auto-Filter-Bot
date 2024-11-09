@@ -1071,4 +1071,3 @@ async def advantage_spell_chok(message, s):
         await message.delete()
     except:
         pass
-
