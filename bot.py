@@ -4,7 +4,7 @@ import asyncio
 import uvloop
 
 # pyrogram imports
-from pyrogram import types
+from pyrogram import types, idle
 from pyrogram import Client
 from pyrogram.errors import FloodWait
 
@@ -26,14 +26,15 @@ from pymongo.server_api import ServerApi
 uvloop.install()
 
 class Bot(Client):
-    def __init__(self):
+    def __init__(self, bot_token):
         super().__init__(
             name='Auto_Filter_Bot',
             api_id=API_ID,
             api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
+            bot_token=bot_token,
             plugins={"root": "plugins"}
         )
+        self.web_app_runner = None  # Initialize the web app runner as None
 
     async def start(self):
         temp.START_TIME = time.time()
@@ -62,14 +63,15 @@ class Bot(Client):
         temp.ME = me.id
         temp.U_NAME = me.username
         temp.B_NAME = me.first_name
-        username = '@' + me.username
         print(f"{me.first_name} is started now 🤗")
-        #groups = await db.get_all_chats_count()
-        #for grp in groups:
-            #await save_group_settings(grp['id'], 'fsub', "")
-        app = web.AppRunner(web_app)
-        await app.setup()
-        await web.TCPSite(app, "0.0.0.0", PORT).start()
+        
+        # Setup and start the web server
+        self.web_app_runner = web.AppRunner(web_app)
+        await self.web_app_runner.setup()
+        self.web_site = web.TCPSite(self.web_app_runner, "0.0.0.0", PORT)
+        await self.web_site.start()
+
+        # Send restart messages
         try:
             await self.send_message(chat_id=LOG_CHANNEL, text=f"<b>{me.mention} Restarted! 🤖</b>")
         except:
@@ -85,33 +87,13 @@ class Bot(Client):
             await self.send_message(chat_id=admin, text="<b>✅ ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ</b>")
 
     async def stop(self, *args):
+        if self.web_app_runner:
+            await self.web_site.stop()
+            await self.web_app_runner.cleanup()
         await super().stop()
         print("Bot Stopped! Bye...")
 
     async def iter_messages(self: Client, chat_id: Union[int, str], limit: int, offset: int = 0) -> Optional[AsyncGenerator["types.Message", None]]:
-        """Iterate through a chat sequentially.
-        This convenience method does the same as repeatedly calling :meth:`~pyrogram.Client.get_messages` in a loop, thus saving
-        you from the hassle of setting up boilerplate code. It is useful for getting the whole chat messages with a
-        single call.
-        Parameters:
-            chat_id (``int`` | ``str``):
-                Unique identifier (int) or username (str) of the target chat.
-                For your personal cloud (Saved Messages) you can simply use "me" or "self".
-                For a contact that exists in your Telegram address book you can use his phone number (str).
-                
-            limit (``int``):
-                Identifier of the last message to be returned.
-                
-            offset (``int``, *optional*):
-                Identifier of the first message to be returned.
-                Defaults to 0.
-        Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Message` objects.
-        Example:
-            .. code-block:: python
-                async for message in app.iter_messages("pyrogram", 1000, 100):
-                    print(message.text)
-        """
         current = offset
         while True:
             new_diff = min(200, limit - current)
@@ -122,13 +104,26 @@ class Bot(Client):
                 yield message
                 current += 1
 
-app = Bot()
-try:
-    app.run()
-except FloodWait as vp:
-    time = get_readable_time(vp.value)
-    print(f"Flood Wait Occured, Sleeping For {time}")
-    asyncio.sleep(vp.value)
-    print("Now Ready For Deploying !")
-    app.run()
+async def restart_every_2_hours(bot):
+    try:
+        while True:
+            await asyncio.sleep(7200)  # Wait for 2 hours (7200 seconds)
+            print("Restarting bot...")
+            await bot.stop()
+            await bot.start()
+            await bot.send_message(LOG_CHANNEL, "MoviesX Bot restarted automatically after 2 hours!")
+    except Exception as e:
+        print(f"Error occurred during scheduled restart: {e}")
+
+# Initialize and run the bot with scheduled 2-hour restarts
+async def run_bot():
+    bot = Bot(BOT_TOKEN)
+    await bot.start()
+    # Start the 2-hour restart schedule
+    await restart_every_2_hours(bot)
+
+# Run the bot with asyncio loop
+if __name__ == "__main__":
+    asyncio.run(run_bot())
+
 

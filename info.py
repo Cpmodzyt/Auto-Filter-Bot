@@ -27,11 +27,11 @@ API_HASH = environ.get('API_HASH', '2b79fd2d2c83173807a039325e7e166f')
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '7393027154:AAG2XBbdLZKN50AwGlOlEIAEVYWxmABKnv4')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7393027154:AAGuzYiDmbAW83VwGdFDIfxda7-tpSkM9UM')
 if len(BOT_TOKEN) == 0:
     print('Error - BOT_TOKEN is missing, exiting now')
     exit()
-PORT = int(environ.get('PORT', '8868'))
+PORT = int(environ.get('PORT', '8888'))
 
 # Bot pics
 PICS = (environ.get('PICS', 'https://i.ibb.co/M7X19Qr/file-949.jpg')).split()
