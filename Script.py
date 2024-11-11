@@ -78,6 +78,7 @@ I can't find the <b>{}</b> in my database! 🥲
 🎭 Director ➜ {director}<br>
 🌎 Country ➜ {countries}<br>
 📕 Genres ➜ {genres}<br>\n<br>
+📖️ Story ➜ {plot}<br>\n<br>
 >> <a href="https://t.me/InterWorld_Ofc">#InterWorld</a> | <a href="https://t.me/InterWorldMoviesXbot">@MoviesX</a></b>
 """
 
