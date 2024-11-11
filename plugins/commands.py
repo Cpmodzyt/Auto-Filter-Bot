@@ -659,4 +659,3 @@ async def remove_fsub(client, message):
         return
     await save_group_settings(grp_id, 'fsub', None)
     await message.reply_text("<b>Successfully removed your force channel id...</b>")
-

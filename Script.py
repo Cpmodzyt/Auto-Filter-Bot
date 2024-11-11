@@ -78,8 +78,7 @@ I can't find the <b>{}</b> in my database! 🥲
 🎭 Director ➜ {director}<br>
 🌎 Country ➜ {countries}<br>
 📕 Genres ➜ {genres}<br>\n<br>
-📖️ Story ➜ {plot}<br>\n<br>
-<blockquote><a href="https://t.me/InterWorld_Ofc">#InterWorld</a> | <a href="https://t.me/InterWorldMoviesXbot">@MoviesX</a></blockquote></b>
+>> <a href="https://t.me/InterWorld_Ofc">#InterWorld</a> | <a href="https://t.me/InterWorldMoviesXbot">@MoviesX</a></b>
 """
 
     FILE_CAPTION = """<b>📓 Fɪʟᴍ Nᴀᴍᴇ :</b> 
@@ -90,22 +89,7 @@ I can't find the <b>{}</b> in my database! 🥲
 <b>🔘 Uᴘʟᴏᴀᴅ Bʏ :
 <blockquote><a herf=https://t.me/InterWorld_Ofc>#InterWorld</a> | <a herf=https://t.me/InterWorldMoviesXbot>@MoviesX</a></blockquote></b>"""
 
-    WELCOME_TEXT = """<b><blockquote>👋 Hello {mention} , </blockquote> 
-📚  Films ගන්නෙ කොහොමද ? 
-
-📖 ඔයාට කරන්න තියෙන්නෙ ඔයාට ඔනි Film එකෙ හෝ TV Series එකෙ නම අවුරුද්ද සමග Group එකට දාන්න 😻🩷
-
-<blockquote>උදා :- Spiderman 2021 ✔️</blockquote>
-
-🚀 Film ගන්න හැටි ගැන වැඩි විතර Pin කරලා තියෙන Message එක බලන්න
-
-📖 ඔයාලට Film එකෙ අවුරුද්ද මතක නැත්තම් 🤔 නිකන් නම විතරක් දාලා බලන්න එහෙම ආවෙ නැත්තන් Google කරලා අවුරුද්ද දැනගන්න 💕 
-
-⭕️ @Interworldmxbot පාවිච්චි කරන්න යට Channel එකට ජොයින් වෙලා ඉන්න ඔනී 😍❤️‍🔥 
-
-<blockquote>🔗 @InterworldmX ✔️</blockquote>
-
-🔻 Admin / Bot Creator : <a herf=https://t.me/itzmecp>Itzmecp</a> | <a herf=https://t.me/DiniduSilva>@Dinidusilva</a></b>"""
+    WELCOME_TEXT = """<b>👋 Hello {mention} , Welcome to the Group !</b>"""
 
     HELP_TXT = """<b>Note - <spoiler>Try each command without any argument to see more details 😹</spoiler></b>"""
     
