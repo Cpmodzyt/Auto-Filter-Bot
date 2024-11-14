@@ -16,14 +16,14 @@ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ
 ★ Username: @Itzmecp
 ★ Country: Sri Lanka 🇱🇰"""
 
-    STATUS_TXT = 
-"""```<code>Total Files: {}</code>
-<code>Total Users: {}</code>
-<code>Total Chats: {}</code>
-<code>Premium Users: {}</code>
-<code>Used Storage: {}</code>
-<code>Free Storage: {}</code>
-<code>Bot Uptime: {}</code>```"""
+    STATUS_TXT = """<code>Total Files: {}</code><br>
+<code>Total Users: {}</code><br>
+<code>Total Chats: {}</code><br>
+<code>Premium Users: {}</code><br>
+<code>Used Storage: {}</code><br>
+<code>Free Storage: {}</code><br>
+<code>Bot Uptime: {}</code>"""
+
 
     NEW_GROUP_TXT = """#NewGroup
 Title - {}
