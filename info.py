@@ -119,7 +119,7 @@ if len(BIN_CHANNEL) == 0:
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "184.174.33.24")
+URL = environ.get("URL", "184.174.33.24:8888")
 if len(URL) == 0:
     print('Error - URL is missing, exiting now')
     exit()
