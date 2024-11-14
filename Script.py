@@ -6,23 +6,23 @@ class script(object):
 
 I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Oʀ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ !</b>"""
 
-    MY_ABOUT_TXT = """<b>✯ Dᴇᴠᴇʟᴏᴩᴇʀ: <a herf=https://t.me/itzmecp>Itzmecp</a> & <a herf=https://t.me/DiniduSilva>Mr Buddy</a>
-✯ Cᴏᴅᴇᴅ Oɴ: ᴩʏᴛʜᴏɴ/ᴩʏʀᴏɢʀᴀᴍ
-✯ Mʏ DᴀᴛᴀBᴀꜱᴇ: ᴍᴏɴɢᴏ-ᴅʙ
-✯ Mʏ Sᴇʀᴠᴇʀ: ᴀɴʏᴡʜᴇʀᴇ
-✯ Mʏ Vᴇʀꜱɪᴏɴ: MoviesX ᴠ5.0.1</b>"""
+    MY_ABOUT_TXT = """<b>✯ Developer: Itzmecp & Mr Buddy
+✯ Coded On: Python/Pyrogram
+✯ My Database: Mongo-DB
+✯ My Server: Anywhere
+✯ My Version: MoviesX v5.0.1</b>"""
 
     MY_OWNER_TXT = """★ Name: Itzmecp
 ★ Username: @Itzmecp
 ★ Country: Sri Lanka 🇱🇰"""
 
-    STATUS_TXT = """🗂 Total Files: <code>{}</code>
+    STATUS_TXT = """<b>🗂 Total Files: <code>{}</code>
 👤 Total Users: <code>{}</code>
 👥 Total Chats: <code>{}</code>
 🤑 Premium Users: <code>{}</code>
 ✨ Used Storage: <code>{}</code>
 🗳 Free Storage: <code>{}</code>
-🚀 Bot Uptime: <code>{}</code>"""
+🚀 Bot Uptime: <code>{}</code></b>"""
 
     NEW_GROUP_TXT = """#NewGroup
 Title - {}
@@ -88,7 +88,7 @@ I can't find the <b>{}</b> in my database! 🥲
 <b>▫️ Sɪᴢᴇ :</b> <code>{file_size}</code>
 
 <b>🔘 Uᴘʟᴏᴀᴅ Bʏ :
-<blockquote><a herf=https://t.me/InterWorld_Ofc>#InterWorld</a> | <a herf=https://t.me/InterWorldMoviesXbot>@MoviesX</a></blockquote></b>"""
+<blockquote><a herf=https://t.me/InterWorldmx>#InterWorld</a> | <a herf=https://t.me/InterWorldMXbot>@MoviesX</a></blockquote></b>"""
 
     WELCOME_TEXT = """<b>👋 Hello {mention} , Welcome to the Group !</b>"""
 
