@@ -71,18 +71,16 @@ I can't find the <b>{}</b> in my database! 🥲
 
 📝 ɴᴏᴛᴇ:- ʏᴏᴜ sʜᴏᴜʟᴅ ɴᴏᴛ ʙᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ɪɴ ɢʀᴏᴜᴘ. sᴇɴᴅ ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜᴏᴜᴛ ʙᴇɪɴɢ ᴀɴ ᴀɴᴏɴʏᴍᴜs ᴀᴅᴍɪɴ.</b>"""
 
-    IMDB_TEMPLATE = """<b>☘️ Title: {title} | {year}
-    📆 Release Date ➜ {release_date}
-    ⭐️ Rating ➜ {rating} / 10
-    ⏰ Runtime ➜ {runtime} minutes
-    🌼 Languages ➜ #{languages}
-    🎭 Director ➜ {director}
-    🌎 Country ➜ {countries}
-    📕 Genres ➜ {genres}
-    
-    📖️ Story ➜ {plot}
-    
-    <blockquote><a href="https://t.me/InterWorldmx>#InterWorld</a> | <a href="https://t.me/InterWorldMXbot">@MoviesX</a></blockquote></b>
+    IMDB_TEMPLATE = """<b>☘️ Title: {title} | {year}</b><br>
+📆 <b>Release Date ➜</b> {release_date}<br>
+⭐️ <b>Rating ➜</b> {rating} / 10<br>
+⏰ <b>Runtime ➜</b> {runtime} minutes<br>
+🌼 <b>Languages ➜</b> #{languages}<br>
+🎭 <b>Director ➜</b> {director}<br>
+🌎 <b>Country ➜</b> {countries}<br>
+📕 <b>Genres ➜</b> {genres}<br><br>
+📖️ <b>Story ➜</b> {plot}<br><br>
+<blockquote><a href="https://t.me/InterWorldmx">#InterWorld</a> | <a href="https://t.me/InterWorldMXbot">@MoviesX</a></blockquote>
 """
 
     FILE_CAPTION = """<b>📓 Fɪʟᴍ Nᴀᴍᴇ :</b> 
