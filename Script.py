@@ -16,8 +16,8 @@ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ
 ★ Username: @Itzmecp
 ★ Country: Sri Lanka 🇱🇰"""
 
-    STATUS_TXT = """```
-<code>Total Files: {}</code>
+    STATUS_TXT = 
+"""```<code>Total Files: {}</code>
 <code>Total Users: {}</code>
 <code>Total Chats: {}</code>
 <code>Premium Users: {}</code>
