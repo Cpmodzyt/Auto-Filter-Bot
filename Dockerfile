@@ -12,4 +12,4 @@ COPY . /Auto-Filter-Bot
 # Install Python dependencies
 RUN pip install -r requirements.txt
 
-CMD ["python", "Bot/__main__.py"]
+CMD ["python", "bot.py"]
