@@ -1,15 +1,17 @@
-# Use Python 3.12 as the base image
-FROM python:3.12-slim
+FROM python:3.11
 
-# Set the working directory
-WORKDIR /app
+WORKDIR /Auto-Filter-Bot
 
-# Copy your bot code and requirements.txt into the container
-COPY bot.py /app
-COPY requirements.txt /app
+# Copy all contents to the container's working directory
+COPY . /Auto-Filter-Bot
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-# Add a loop to restart every 4 hours
-CMD ["sh", "-c", "while true; do python bot.py; sleep 14400; done"]
+RUN apt-get update && apt-get install -y cron
+# Create a cron job to restart the bot every 2 hours
+
+RUN echo "0 */4 * * * /usr/bin/pkill -f bot.py" > /etc/cron.d/bot-cron
+
+RUN chmod 0644 /etc/cron.d/bot-cron && crontab /etc/cron.d/bot-cron
+
+CMD cron && python bot.py
