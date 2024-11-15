@@ -8,8 +8,8 @@ COPY . /Auto-Filter-Bot
 RUN pip install -r requirements.txt
 
 RUN apt-get update && apt-get install -y cron
-# Create a cron job to restart the bot every 2 hours
 
+# Create a cron job to restart the bot every 4 hours
 RUN echo "0 */4 * * * /usr/bin/pkill -f bot.py" > /etc/cron.d/bot-cron
 
 RUN chmod 0644 /etc/cron.d/bot-cron && crontab /etc/cron.d/bot-cron
